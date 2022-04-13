@@ -359,8 +359,11 @@ class EDD_SL_Plugin_Updater {
      */
     private function convert_object_to_array( $data ) {
         $new_data = array();
-        foreach ( $data as $key => $value ) {
-            $new_data[ $key ] = is_object( $value ) ? $this->convert_object_to_array( $value ) : $value;
+        
+        if (is_object($data) || is_array($data)) {
+            foreach ($data as $key => $value) {
+                $new_data[ $key ] = is_object($value) ? $this->convert_object_to_array($value) : $value;
+            }
         }
 
         return $new_data;
