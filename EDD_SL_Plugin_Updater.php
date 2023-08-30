@@ -17,8 +17,8 @@ if ( ! class_exists('Alledia\\EDD_SL_Plugin_Updater')) {
  */
 class EDD_SL_Plugin_Updater {
     
-    const VERSION = '1.6.21';
-
+    const VERSION = '1.6.23';
+  
     private $api_url     = '';
     private $api_data    = array();
     private $name        = '';
