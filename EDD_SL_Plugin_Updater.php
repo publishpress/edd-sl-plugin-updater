@@ -321,6 +321,10 @@ class EDD_SL_Plugin_Updater {
             $_data = $edd_api_request_transient;
         }
 
+        if (is_bool($_data)) {
+            return $_data;
+        }
+
         // Convert sections into an associative array, since we're getting an object, but Core expects an array.
         if ( isset( $_data->sections ) && ! is_array( $_data->sections ) ) {
             $_data->sections = $this->convert_object_to_array( $_data->sections );
