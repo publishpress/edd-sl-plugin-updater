@@ -17,14 +17,15 @@ if ( ! class_exists('Alledia\\EDD_SL_Plugin_Updater')) {
  */
 class EDD_SL_Plugin_Updater {
     
-    const VERSION = '1.6.22';
-
+    const VERSION = '1.6.23';
+  
     private $api_url     = '';
     private $api_data    = array();
     private $name        = '';
     private $slug        = '';
     private $version     = '';
     private $wp_override = false;
+    private $beta = false;
     private $cache_key   = '';
 
     private $health_check_timeout = 5;
