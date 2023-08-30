@@ -13,12 +13,12 @@ if ( ! class_exists('Alledia\\EDD_SL_Plugin_Updater')) {
  * Allows plugins to use their own update API.
  *
  * @author Easy Digital Downloads
- * @version 1.6.20
+ * @version 1.6.23
  */
 class EDD_SL_Plugin_Updater {
     
     const VERSION = '1.6.23';
-  
+
     private $api_url     = '';
     private $api_data    = array();
     private $name        = '';
