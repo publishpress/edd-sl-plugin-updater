@@ -420,7 +420,7 @@ class EDD_SL_Plugin_Updater {
             } else {
                 $test_url = $scheme . '://' . $host . $port;
                 $response = wp_remote_get( $test_url, array( 'timeout' => $this->health_check_timeout, 'sslverify' => $verify_ssl ) );
-                $edd_plugin_url_available[ $store_hash ] = is_wp_error( $response ) ? false : true;
+                $edd_plugin_url_available[ $store_hash ] = ! is_wp_error($response);
             }
         }
 
