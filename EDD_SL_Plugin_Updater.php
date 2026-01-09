@@ -7,7 +7,7 @@ use stdClass;
 // Exit if accessed directly
 if (!defined('ABSPATH')) exit;
 
-if ( ! class_exists('Alledia\\EDD_SL_Plugin_Updater')) {
+if (class_exists('Alledia\\EDD_SL_Plugin_Updater')) {
     return;
 }
 
