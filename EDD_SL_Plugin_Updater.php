@@ -5,6 +5,8 @@ namespace Alledia;
 use stdClass;
 
 // Exit if accessed directly
+if (!defined('ABSPATH')) exit;
+
 if ( ! class_exists('Alledia\\EDD_SL_Plugin_Updater')) {
     return;
 }
@@ -16,7 +18,7 @@ if ( ! class_exists('Alledia\\EDD_SL_Plugin_Updater')) {
  * @version 1.6.23
  */
 class EDD_SL_Plugin_Updater {
-    
+
     const VERSION = '1.6.23';
 
     private $api_url     = '';
@@ -366,7 +368,7 @@ class EDD_SL_Plugin_Updater {
      */
     private function convert_object_to_array( $data ) {
         $new_data = array();
-        
+
         if (is_object($data) || is_array($data)) {
             foreach ($data as $key => $value) {
                 $new_data[ $key ] = is_object($value) ? $this->convert_object_to_array($value) : $value;
