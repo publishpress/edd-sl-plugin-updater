@@ -157,7 +157,7 @@ class EDD_SL_Plugin_Updater
             return;
         }
 
-        if (! current_user_can('update_plugins')) {
+        if (! current_user_can('activate_plugins')) {
             return;
         }
 
@@ -499,7 +499,7 @@ class EDD_SL_Plugin_Updater
             return;
         }
 
-        if (! current_user_can('update_plugins')) {
+        if (! current_user_can('activate_plugins')) {
             wp_die(__('You do not have permission to install plugin updates', 'easy-digital-downloads'), __('Error', 'easy-digital-downloads'), array('response' => 403));
         }
 
